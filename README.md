@@ -34,7 +34,7 @@ In your `BindingAdapter`
 	public static void setItemDragToRecyclerView(RecyclerView recyclerView, boolean dragEnabled,
 	                                             DragItemTouchHelperCallback.OnItemDragListener onItemDrag) {
 
-		... // attach RecyclerView to DragItemTouchHelperCallback done as above
+		... // attach RecyclerView to DragItemTouchHelperCallback as above
 	}
 ```
 
