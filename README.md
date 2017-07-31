@@ -1,20 +1,20 @@
 ## Draggable RecyclerView
 
-DraggableRecyclerView provides a wrapper class `DragItemTouchHelperCallback` extends `ItemTouchHelper.Callback` which you can use to add Dragging capability to your RecyclerView elements. You make use of DataBinding to bind it via XML.
+DraggableRecyclerView provides a wrapper class `DragItemTouchHelperCallback` extends `ItemTouchHelper.Callback` which you can use to add Dragging capability to your RecyclerView items. You make use of `DataBinding` to bind it via XML.
 
 <img src="./README_images/draggable_recyclerview.gif" width="300" height="534"/>
 
 ## How to Use
 
 ```
-    DragItemTouchHelperCallback dragCallback = new DragItemTouchHelperCallback
-				.Builder(ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0)
-				.setDragEnabled(dragEnabled)
-				.onItemMoveListener(onItemDrag)
-				.build();
+   DragItemTouchHelperCallback dragCallback = new DragItemTouchHelperCallback
+   				.Builder(ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0)
+   				.setDragEnabled(dragEnabled)
+   				.onItemMoveListener(onItemDrag)
+   				.build();
 
-	ItemTouchHelper itemTouchHelper = new ItemTouchHelper(dragCallback);
-	itemTouchHelper.attachToRecyclerView(recyclerView);
+   ItemTouchHelper itemTouchHelper = new ItemTouchHelper(dragCallback);
+   itemTouchHelper.attachToRecyclerView(recyclerView);
 ```
 
 ## How to Bind
@@ -62,5 +62,5 @@ Add Android Support Design dependency to your gradle file.
 
 ## Reference
 
-[ItemTouchHelper.SimpleCallback](https://developer.android.com/reference/android/support/v7/widget/helper/ItemTouchHelper.SimpleCallback.html)
-[Drag and Swipe with RecyclerView](https://medium.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf)
+- [ItemTouchHelper.SimpleCallback](https://developer.android.com/reference/android/support/v7/widget/helper/ItemTouchHelper.SimpleCallback.html)
+- [Drag and Swipe with RecyclerView](https://medium.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf)
