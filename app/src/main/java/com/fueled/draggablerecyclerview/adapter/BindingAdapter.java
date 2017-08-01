@@ -6,14 +6,14 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import com.fueled.draggablerecyclerview.DragItemTouchHelperCallback;
 
 /**
- * Copyright (c) 2017 Fueled. All rights reserved.
- *
  * @author chetansachdeva on 27/07/17
  */
 
 public class BindingAdapter {
 
 	/**
+	 * Bind ItemTouchHelper.SimpleCallback with RecyclerView
+	 *
 	 * @param recyclerView      RecyclerView to bind to DragItemTouchHelperCallback
 	 * @param dragEnabled       enable/disable swipe
 	 * @param onItemDrag        OnItemDragListener for dragged

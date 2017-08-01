@@ -30,7 +30,7 @@ In your `Gradle`
 In your `BindingAdapter`
 
 ```
-	/**
+  /**
 	 * @param recyclerView      RecyclerView to bind to DragItemTouchHelperCallback
 	 * @param dragEnabled       enable/disable swipe
 	 * @param onItemDrag        OnItemDragListener for dragged

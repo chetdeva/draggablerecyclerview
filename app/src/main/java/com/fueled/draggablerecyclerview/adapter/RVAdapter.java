@@ -14,8 +14,6 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Copyright (c) 2017 Fueled. All rights reserved.
- *
  * @author chetansachdeva on 04/06/17
  */
 

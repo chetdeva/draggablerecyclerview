@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
 /**
- * Copyright (c) 2017 Fueled. All rights reserved.
  * Reference @link {https://medium.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf}
  *
  * @author chetansachdeva on 26/07/17
