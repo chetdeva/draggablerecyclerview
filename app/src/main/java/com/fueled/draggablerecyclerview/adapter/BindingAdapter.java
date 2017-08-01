@@ -22,7 +22,7 @@ public class BindingAdapter {
 	public static void setItemDragToRecyclerView(RecyclerView recyclerView, boolean dragEnabled,
 	                                             DragItemTouchHelperCallback.OnItemDragListener onItemDrag) {
 
-		DragItemTouchHelperCallback dragCallback = new DragItemTouchHelperCallback
+		ItemTouchHelper.Callback dragCallback = new DragItemTouchHelperCallback
 				.Builder(ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0)
 				.setDragEnabled(dragEnabled)
 				.onItemMoveListener(onItemDrag)
