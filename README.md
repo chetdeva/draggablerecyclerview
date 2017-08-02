@@ -7,14 +7,14 @@ DraggableRecyclerView provides a wrapper class `DragItemTouchHelperCallback` ext
 ## How to Use
 
 ```
-   DragItemTouchHelperCallback dragCallback = new DragItemTouchHelperCallback
-   				.Builder(ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0)
-   				.setDragEnabled(dragEnabled)
-   				.onItemMoveListener(onItemDrag)
-   				.build();
+    ItemTouchHelper.Callback dragCallback = new DragItemTouchHelperCallback
+            .Builder(ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0)
+            .setDragEnabled(dragEnabled)
+            .onItemDragListener(onItemDrag)
+            .build();
 
-   ItemTouchHelper itemTouchHelper = new ItemTouchHelper(dragCallback);
-   itemTouchHelper.attachToRecyclerView(recyclerView);
+    ItemTouchHelper itemTouchHelper = new ItemTouchHelper(dragCallback);
+    itemTouchHelper.attachToRecyclerView(recyclerView);
 ```
 
 ## How to Bind
