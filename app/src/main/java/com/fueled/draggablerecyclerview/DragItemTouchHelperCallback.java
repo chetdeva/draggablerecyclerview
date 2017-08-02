@@ -73,7 +73,7 @@ public class DragItemTouchHelperCallback extends ItemTouchHelper.SimpleCallback 
 			this.swipeDirs = swipeDirs;
 		}
 
-		public Builder onItemMoveListener(OnItemDragListener onItemDragListener) {
+		public Builder onItemDragListener(OnItemDragListener onItemDragListener) {
 			this.onItemDragListener = onItemDragListener;
 			return this;
 		}

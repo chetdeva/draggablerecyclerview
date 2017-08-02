@@ -15,7 +15,7 @@ public class BindingAdapter {
 	 * Bind ItemTouchHelper.SimpleCallback with RecyclerView
 	 *
 	 * @param recyclerView      RecyclerView to bind to DragItemTouchHelperCallback
-	 * @param dragEnabled       enable/disable swipe
+	 * @param dragEnabled       enable/disable drag
 	 * @param onItemDrag        OnItemDragListener for dragged
 	 */
 	@android.databinding.BindingAdapter(value = {"dragEnabled", "onItemDrag"}, requireAll = false)
@@ -25,7 +25,7 @@ public class BindingAdapter {
 		ItemTouchHelper.Callback dragCallback = new DragItemTouchHelperCallback
 				.Builder(ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0)
 				.setDragEnabled(dragEnabled)
-				.onItemMoveListener(onItemDrag)
+				.onItemDragListener(onItemDrag)
 				.build();
 
 		ItemTouchHelper itemTouchHelper = new ItemTouchHelper(dragCallback);
