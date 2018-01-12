@@ -1,20 +1,20 @@
 ## Draggable RecyclerView
 
-DraggableRecyclerView provides a wrapper class `DragItemTouchHelperCallback` extends `ItemTouchHelper.Callback` which you can use to add Dragging capability to your RecyclerView items. You can make use of `DataBinding` to bind it via XML.
+DraggableRecyclerView provides a wrapper class [DragItemTouchHelperCallback](./app/src/main/java/com/fueled/draggablerecyclerview/DragItemTouchHelperCallback.java) extends `ItemTouchHelper.Callback` which you can use to add Dragging capability to your RecyclerView items. You can make use of `DataBinding` to bind it via XML.
 
 <img src="./README_images/draggable_recyclerview.gif" width="300" height="534"/>
 
 ## How to Use
 
 ```java
-    ItemTouchHelper.Callback dragCallback = new DragItemTouchHelperCallback
-            .Builder(ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0)
-            .setDragEnabled(dragEnabled)
-            .onItemDragListener(onItemDrag)
-            .build();
+ItemTouchHelper.Callback dragCallback = new DragItemTouchHelperCallback
+        .Builder(ItemTouchHelper.UP | ItemTouchHelper.DOWN, 0)
+        .setDragEnabled(dragEnabled)
+        .onItemDragListener(onItemDrag)
+        .build();
 
-    ItemTouchHelper itemTouchHelper = new ItemTouchHelper(dragCallback);
-    itemTouchHelper.attachToRecyclerView(recyclerView);
+ItemTouchHelper itemTouchHelper = new ItemTouchHelper(dragCallback);
+itemTouchHelper.attachToRecyclerView(recyclerView);
 ```
 
 ## How to Bind
@@ -22,37 +22,37 @@ DraggableRecyclerView provides a wrapper class `DragItemTouchHelperCallback` ext
 In your `Gradle`
 
 ```groovy
-    dataBinding {
-        enabled = true
-    }
+dataBinding {
+    enabled = true
+}
 ```
 
 In your `BindingAdapter`
 
 ```java
-  /**
-	 * @param recyclerView      RecyclerView to bind to DragItemTouchHelperCallback
-	 * @param dragEnabled       enable/disable swipe
-	 * @param onItemDrag        OnItemDragListener for dragged
-	 */
-	@android.databinding.BindingAdapter(value = {"dragEnabled", "onItemDrag"}, requireAll = false)
-	public static void setItemDragToRecyclerView(RecyclerView recyclerView, boolean dragEnabled,
-	                                             DragItemTouchHelperCallback.OnItemDragListener onItemDrag) {
+/**
+ * @param recyclerView      RecyclerView to bind to DragItemTouchHelperCallback
+ * @param dragEnabled       enable/disable swipe
+ * @param onItemDrag        OnItemDragListener for dragged
+ */
+@android.databinding.BindingAdapter(value = {"dragEnabled", "onItemDrag"}, requireAll = false)
+public static void setItemDragToRecyclerView(RecyclerView recyclerView, boolean dragEnabled,
+                                             DragItemTouchHelperCallback.OnItemDragListener onItemDrag) {
 
-		... // attach RecyclerView to DragItemTouchHelperCallback as above
-	}
+    ... // attach RecyclerView to DragItemTouchHelperCallback as above
+}
 ```
 
 In your `XML` file
 
 ```xml
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/white"
-        bind:dragEnabled="@{true}"
-        bind:onItemDrag="@{(indexFrom, indexTo) -> handler.onItemDragged(indexFrom, indexTo)}"/>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/rv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    bind:dragEnabled="@{true}"
+    bind:onItemDrag="@{(indexFrom, indexTo) -> handler.onItemDragged(indexFrom, indexTo)}"/>
 ```
 
 ## Library used
@@ -60,9 +60,9 @@ In your `XML` file
 Add Android Support Design dependency to your gradle file.
 
 ```groovy
-    dependencies {
-        compile 'com.android.support:design:{latest_version}'
-    }
+dependencies {
+    compile 'com.android.support:design:{latest_version}'
+}
 ```
 
 ## Reference
